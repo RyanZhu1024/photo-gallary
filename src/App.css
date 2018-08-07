@@ -1,0 +1,36 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+body {
+  background-color: #000;
+}
+
+.container {
+  perspective: 1000px;
+}
+
+.images {
+  width: 500px;
+  height: 500px;
+  margin: 250px auto;
+  position: relative;
+  transform: rotateX(-180deg);
+  transform-style: preserve-3d;
+  animation: rotateY360 15s ease-in-out infinite;
+}
+
+.images img {
+  position: absolute;
+  box-shadow: 0px 0px 8px #eee;
+}
+
+@keyframes rotateY360 {
+  from {
+    transform: rotateY(0deg);
+  }
+  to {
+    transform: rotateY(360deg);
+  }
+}
